@@ -1,9 +1,10 @@
 import { Component, signal, HostListener  } from '@angular/core';
 import { RouterOutlet, RouterLink, RouterLinkActive  } from '@angular/router';
+import { Header } from './header/header';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, RouterLink, RouterLinkActive],
+  imports: [RouterOutlet, Header],
   templateUrl: './app.html',
   styleUrl: './app.sass'
 })
