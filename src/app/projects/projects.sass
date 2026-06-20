@@ -1,0 +1,133 @@
+/*------Global Sections------*/
+section,
+.section
+  --background-color: #12120e;
+  color: var(--default-color);
+  background-color: var(--background-color);
+  padding: 60px 0;
+  scroll-margin-top: 100px;
+  overflow: clip;
+
+
+/*------Scroll Top Button------*/
+.scroll-top
+  position: fixed;
+  visibility: hidden;
+  opacity: 0;
+  right: 15px;
+  bottom: -15px;
+  z-index: 99999;
+  background-color: var(--accent-color);
+  width: 44px;
+  height: 44px;
+  border-radius: 50px;
+  transition: all 0.4s;
+  display: flex;
+  align-items: center;      /* vertical center */
+  justify-content: center;
+
+
+.scroll-top i
+  font-size: 24px;
+  color: var(--contrast-color);
+  line-height: 1.8;
+  padding: 10px;
+
+
+.scroll-top:hover
+  background-color: color-mix(in srgb, var(--accent-color), transparent 20%);
+  color: var(--contrast-color);
+
+
+.scroll-top.active
+  visibility: visible;
+  opacity: 1;
+  bottom: 15px;
+
+
+/*------projects Section------*/
+
+.projects .project-item
+  background-color: var(--surface-color);
+  text-align: center;
+  padding: 80px 20px;
+  transition: all ease-in-out 0.3s;
+  height: 100%;
+
+
+.projects
+  margin-top: 0px;
+
+.projects .container
+  @media (max-width: 768px)
+    margin-top: 70px;
+  @media (min-width: 1200px)
+      margin-top: 60px;
+
+
+.projects .project-item .icon
+  margin: 0 auto;
+  width: 64px;
+  height: 64px;
+  background: var(--accent-color);
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+  transition: 0.3s;
+  transform-style: preserve-3d;
+
+
+.projects .project-item .icon i
+  color: var(--contrast-color);
+  font-size: 28px;
+  transition: ease-in-out 0.3s;
+
+
+.projects .project-item .icon::before
+  position: absolute;
+  content: "";
+  left: -8px;
+  top: -8px;
+  height: 100%;
+  width: 100%;
+  background: color-mix(in srgb, var(--accent-color), transparent 80%);
+  border-radius: 5px;
+  transition: all 0.3s ease-out 0s;
+  transform: translateZ(-1px);
+
+
+.projects .project-item h3
+  font-weight: 700;
+  margin: 10px 0 15px 0;
+  font-size: 22px;
+
+
+.projects .project-item p
+  line-height: 24px;
+  font-size: 14px;
+  margin-bottom: 0;
+
+
+.projects .project-item:hover
+  background: var(--accent-color);
+  border-color: var(--accent-color);
+
+
+.projects .project-item:hover .icon
+  background: var(--surface-color);
+
+
+.projects .project-item:hover .icon i
+  color: var(--accent-color);
+
+
+.projects .project-item:hover .icon::before
+  background: color-mix(in srgb, var(--background-color), transparent 70%);
+
+
+.projects .project-item:hover h3,
+.projects .project-item:hover p
+  color: var(--contrast-color);
+

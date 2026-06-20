@@ -1,4 +1,6 @@
+/*------Font and Color Variables------*/
 /* Fonts */
+
 :root
   --default-font: "Roboto",  system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   --heading-font: "Raleway",  sans-serif;
@@ -31,7 +33,6 @@
   --background-color: #1a1a1a;
   --surface-color: #343434;
 
-
 .dark-background
   --background-color: rgba(15, 15, 15, 0.975);
   --default-color: #ffffff;
@@ -39,14 +40,34 @@
   --surface-color: #292929f9;
   --contrast-color: #000000;
 
-
 /* Smooth scroll */
 :root
   scroll-behavior: smooth;
 
+/*------General Styling & Shared Classes------*/
+body
+  color: var(--default-color);
+  background-color: var(--background-color);
+  font-family: var(--default-font);
 
-html, body
-  margin: 0;
-  padding: 0;
-  height: 100%;
+a
+  color: var(--accent-color);
+  text-decoration: none;
+  transition: 0.3s;
 
+a:hover
+  color: color-mix(in srgb, var(--accent-color), transparent 25%);
+  text-decoration: none;
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6
+  color: var(--heading-color);
+  font-family: var(--heading-font);
+
+.container
+  margin-left: 5;
+  margin-right: auto;

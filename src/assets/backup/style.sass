@@ -1,3 +1,4 @@
+@import "bootstrap-icons/font/bootstrap-icons.css";
 
 /*------Font & Color Variables------*/
 /* Fonts */
@@ -75,45 +76,14 @@ h6
   font-family: var(--heading-font);
 
 
-html, body
-  margin: 0;
-  padding: 0;
-  width: 100%;
-
-
-app-root
-  display: block;
-  width: 100%;
-
-
-main
-  margin: 0;
-  padding: 0;
-  width: 100%;
-
-.container
-  overflow-y: auto;
-
-.fixed-top
-  position: fixed !important;
-  top: 0;
-  right: 0;
-  left: 0;
-  z-index: 1030;
-
-
 /*------Global Header------*/
 .header
-  --background-color: rgba(18, 18, 14, 0.9);
+  --background-color: rgba(0, 0, 0, 0);
   color: var(--default-color);
   background-color: var(--background-color);
-  color: var(--default-color);
   padding: 15px 0;
   transition: all 0.5s;
   z-index: 997;
-  position: fixed;
-  width: 100%;
-  margin: 0;
 
 
 .header .logo
@@ -131,15 +101,15 @@ main
   font-weight: 700;
   color: var(--heading-color);
 
-.header .scrolled
-  --background-color: rgba(0, 0, 0, 1);
-  background-color: var(--background-color);
+
+.scrolled .header
+  box-shadow: 0px 0 18px rgba(0, 0, 0, 0.1);
 
 
 /*------Global Header on Scroll------*/
 .scrolled .header
   --background-color: rgba(0, 0, 0, 0.8);
-  background-color: var(--background-color);
+
 
 /*------Navigation Menu------*/
 /* Desktop Navigation */
@@ -149,21 +119,11 @@ main
 
 
   .navmenu ul
-    display: flex;
     margin: 0;
     padding: 0;
-    display: flex !important;
+    display: flex;
     list-style: none;
     align-items: center;
-    position: relative;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 1000;
-    transition: background-color 0.3s ease;
-
-  .navmenu ul .scrolled
-    background: #fff; // opaque background
 
 
   .navmenu li
@@ -286,17 +246,6 @@ main
 
 /* Mobile Navigation */
 @media (max-width: 1199px)
-
-@media (max-width: 1199px)
-  .navmenu ul
-    display: flex !important;
-    flex-direction: row !important;
-    position: static !important;
-    overflow-x: auto;
-    white-space: nowrap;
-    align-items: center;
-
-
   .mobile-nav-toggle
     color: var(--nav-color);
     font-size: 28px;
@@ -312,17 +261,19 @@ main
 
 
   .navmenu ul
-    display: flex;
-    flex-direction: row !important;
-    flex-wrap: wrap;
-    align-items: center;
+    display: none;
     list-style: none;
+    position: absolute;
     inset: 60px 20px 20px 20px;
     padding: 10px 0;
     margin: 0;
+    border-radius: 6px;
+    background-color: var(--nav-mobile-background-color);
+    border: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
     box-shadow: none;
     overflow-y: auto;
     transition: 0.3s;
+    z-index: 9998;
 
 
   .navmenu a,
@@ -415,8 +366,8 @@ main
 
 
   .mobile-nav-active .navmenu>ul
-    display: flex;
-    flex-direction: column;
+    display: block;
+
 
 
 /*------Global Footer------*/
@@ -584,16 +535,12 @@ preloader:before
   height: 44px;
   border-radius: 50px;
   transition: all 0.4s;
-  display: flex;
-  align-items: center;      /* vertical center */
-  justify-content: center;
 
 
 .scroll-top i
   font-size: 24px;
   color: var(--contrast-color);
-  line-height: 1.8;
-  padding: 10px;
+  line-height: 0;
 
 
 .scroll-top:hover
