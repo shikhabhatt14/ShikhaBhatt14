@@ -52,6 +52,14 @@ For end-to-end (e2e) testing, run:
 ng e2e
 ```
 
+For Deploying in github, follow below step:
+1. Install angular-cli-ghpages package globally using the following command:
+   npm install angular-cli-ghpages --save-dev
+2. Build your Angular project using the following command:
+   ng build --configuration production --base-href "/shikhabhatt14/"
+3. Deploy your project to GitHub Pages using the following command:
+   npx angular-cli-ghpages --dir=dist/shikhabhatt14/browser
+
 Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
 
 ## Additional Resources
